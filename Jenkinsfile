@@ -30,6 +30,15 @@ pipeline{
         }
       }
     }
+    stage('2-parallel'){
+        parallel {
+          stage('to-test-multi-build'){
+            steps{
+              sh 'lscpu'
+          }
+        }
+      }
+    }
     stage('codebuild'){
     	steps{
     		sh 'cat /etc/passwd'
