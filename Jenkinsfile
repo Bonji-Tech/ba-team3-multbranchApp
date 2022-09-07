@@ -23,6 +23,11 @@ pipeline{
                 echo 'action3'
             }
         }
+        stage('user-check'){
+          steps{
+            sh 'cat /etc/passwd | grep jenkins'
+          }
+        }
       }
     }
     stage('codebuild'){
