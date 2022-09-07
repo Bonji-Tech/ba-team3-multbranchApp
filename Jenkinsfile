@@ -3,7 +3,8 @@ pipeline{
   stages{
   	stage('version-control'){
   		steps{
-  			checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'gitub-id', url: 'https://github.com/Bonji-Tech/ba-tm3-parallel.git']]])
+  			checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'gitub-id', url: 'https://github.com/Bonji-Tech/b
+ba-team3-multbranchApp.git']]])
   		}
   	}
     stage('parallel-job'){
