@@ -1,2 +1,1 @@
-# ba-team3-multbranchApp
-To analyze multi-branch Jenkins pipelines
+# ba-tm3-parallel
