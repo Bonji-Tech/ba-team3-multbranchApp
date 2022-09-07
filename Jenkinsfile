@@ -28,13 +28,13 @@ pipeline{
             sh 'cat /etc/passwd | grep jenkins'
           }
         }
-        stage('2-parallel'){
-          parallel {
-            stage('to-test-multi-build'){
-              steps{
-                sh 'lscpu'
-              }
-            }
+      }
+    }
+    stage('2-parallel'){
+        parallel {
+          stage('to-test-multi-build'){
+            steps{
+              sh 'lscpu'
           }
         }
       }
